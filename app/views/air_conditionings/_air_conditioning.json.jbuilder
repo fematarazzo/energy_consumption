@@ -1,0 +1,2 @@
+json.extract! air_conditioning, :id, :category, :provider, :brand, :model_intern, :model_extern, :version, :capacity_btu_hour, :capacity_kw, :power_kw, :efficiency_kw_127v, :efficiency_kw_220v, :consumption_127v, :consumption_220v, :voltage, :consumption_procel_kwh_per_month, :consumption_average_brazil_kwh_per_month, :hours_consumption_per_month, :created_at, :updated_at
+json.url air_conditioning_url(air_conditioning, format: :json)

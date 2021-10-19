@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @air_conditioning.category %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @air_conditioning.provider %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @air_conditioning.brand %>
+</p>
+
+<p>
+  <strong>Model intern:</strong>
+  <%= @air_conditioning.model_intern %>
+</p>
+
+<p>
+  <strong>Model extern:</strong>
+  <%= @air_conditioning.model_extern %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @air_conditioning.version %>
+</p>
+
+<p>
+  <strong>Capacity btu hour:</strong>
+  <%= @air_conditioning.capacity_btu_hour %>
+</p>
+
+<p>
+  <strong>Capacity kw:</strong>
+  <%= @air_conditioning.capacity_kw %>
+</p>
+
+<p>
+  <strong>Power kw:</strong>
+  <%= @air_conditioning.power_kw %>
+</p>
+
+<p>
+  <strong>Efficiency kw 127v:</strong>
+  <%= @air_conditioning.efficiency_kw_127v %>
+</p>
+
+<p>
+  <strong>Efficiency kw 220v:</strong>
+  <%= @air_conditioning.efficiency_kw_220v %>
+</p>
+
+<p>
+  <strong>Consumption 127v:</strong>
+  <%= @air_conditioning.consumption_127v %>
+</p>
+
+<p>
+  <strong>Consumption 220v:</strong>
+  <%= @air_conditioning.consumption_220v %>
+</p>
+
+<p>
+  <strong>Voltage:</strong>
+  <%= @air_conditioning.voltage %>
+</p>
+
+<p>
+  <strong>Consumption procel kwh per month:</strong>
+  <%= @air_conditioning.consumption_procel_kwh_per_month %>
+</p>
+
+<p>
+  <strong>Consumption average brazil kwh per month:</strong>
+  <%= @air_conditioning.consumption_average_brazil_kwh_per_month %>
+</p>
+
+<p>
+  <strong>Hours consumption per month:</strong>
+  <%= @air_conditioning.hours_consumption_per_month %>
+</p>
+
+<%= link_to 'Edit', edit_air_conditioning_path(@air_conditioning) %> |
+<%= link_to 'Back', air_conditionings_path %>

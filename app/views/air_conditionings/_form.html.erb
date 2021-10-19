@@ -1,0 +1,29 @@
+
+<%= simple_form_for(@air_conditioning) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :category %>
+    <%= f.input :provider %>
+    <%= f.input :brand %>
+    <%= f.input :model_intern %>
+    <%= f.input :model_extern %>
+    <%= f.input :version %>
+    <%= f.input :capacity_btu_hour %>
+    <%= f.input :capacity_kw %>
+    <%= f.input :power_kw %>
+    <%= f.input :efficiency_kw_127v %>
+    <%= f.input :efficiency_kw_220v %>
+    <%= f.input :consumption_127v %>
+    <%= f.input :consumption_220v %>
+    <%= f.input :voltage %>
+    <%= f.input :consumption_procel_kwh_per_month %>
+    <%= f.input :consumption_average_brazil_kwh_per_month %>
+    <%= f.input :hours_consumption_per_month %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
