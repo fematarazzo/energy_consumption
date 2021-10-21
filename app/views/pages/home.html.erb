@@ -1,8 +1,26 @@
-<h1>Ae Fones</h1>
-<h3>Bem-vindo a sua calculadora personalizada, mermão</h3>
+<div class="container">
+    <h1>Ae Fones</h1>
+    <h3>Bem-vindo a sua calculadora personalizada, mermão</h3>
 
 
-<p>Veja a lista de Ar Condicionados e consulte os detalhes, edite ou exclua</p>
+    <p>Veja a lista de Ar Condicionados e consulte os detalhes, edite ou exclua</p>
 
-<%= link_to "Lista de ar condicionados", air_conditionings_path, class: "btn btn-primary" %>
-<%= link_to "Lista de tarifas", air_conditionings_path, class: "btn btn-primary" %>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+    <div class="container">
+        <h1>Calculadora de gastos de energia. Ta pensando o que? <strong>Use e veja a <i>diferença nos seus gastos!</i></strong></h1>
+        <br>
+        <%= link_to "Lista de ar condicionados", air_conditionings_path, class: "btn btn-primary" %>
+        <%= link_to "Lista de tarifas", tariffs_path, class: "btn btn-success" %>
+        <br>
+        <br>
+        <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+            <div class="search-form-control form-group">
+                <input class="form-control string required" placeholder="Ta em construção" type="text" name="search[query]" id="search_query" />
+                <button name="button" type="submit" class="btn btn-flat">
+                <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+        <% end %>
+    </div>
+</div>
+

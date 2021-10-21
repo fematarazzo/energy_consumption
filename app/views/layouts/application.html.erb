@@ -13,6 +13,46 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="main-container">
+      <div id="header">
+        <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+          <%= link_to root_path, class: "nav-link" do %>
+            Fones' Calculator
+          <% end %>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <%= link_to "Ar Condicionados", air_conditionings_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Tarifas", tariffs_path, class: "nav-link" %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <%= yield %>
+      </div>
+      <div id="footer">
+        <div class="footer">
+          <div class="footer-links">
+            <a href="https://github.com/fematarazzo/energy_consumption"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/energialemon/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/EnergiaLemon/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/lemon-energia/"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="footer-copyright">
+            Site feito com muito <i class="fas fa-heart"></i> pelo seu parça
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
