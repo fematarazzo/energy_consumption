@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :tariffs do
+    collection {post :import}
+  end
   resources :air_conditionings do
     collection {post :import}
   end

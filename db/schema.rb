@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_19_010554) do
+ActiveRecord::Schema.define(version: 2021_10_20_235856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,23 @@ ActiveRecord::Schema.define(version: 2021_10_19_010554) do
     t.float "consumption_procel_kwh_per_month"
     t.float "consumption_average_brazil_kwh_per_month"
     t.float "hours_consumption_per_month"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tariffs", force: :cascade do |t|
+    t.string "distribution"
+    t.string "state"
+    t.string "aneel_number"
+    t.string "initial_validity"
+    t.string "final_validity"
+    t.string "subgroup"
+    t.float "tusd_application_reais_per_mwh"
+    t.float "te_application_reais_per_mwh"
+    t.float "total_fee_without_tax_reais_per_mwh"
+    t.float "pis_confis"
+    t.float "icms"
+    t.float "fee_with_tax_reais_per_mwh"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

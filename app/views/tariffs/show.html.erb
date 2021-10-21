@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Distribution:</strong>
+  <%= @tariff.distribution %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @tariff.state %>
+</p>
+
+<p>
+  <strong>Aneel number:</strong>
+  <%= @tariff.aneel_number %>
+</p>
+
+<p>
+  <strong>Initial validity:</strong>
+  <%= @tariff.initial_validity %>
+</p>
+
+<p>
+  <strong>Final validity:</strong>
+  <%= @tariff.final_validity %>
+</p>
+
+<p>
+  <strong>Subgroup:</strong>
+  <%= @tariff.subgroup %>
+</p>
+
+<p>
+  <strong>Tusd application reais per mwh:</strong>
+  <%= @tariff.tusd_application_reais_per_mwh %>
+</p>
+
+<p>
+  <strong>Te application reais per mwh:</strong>
+  <%= @tariff.te_application_reais_per_mwh %>
+</p>
+
+<p>
+  <strong>Total fee without tax reais pew mwh:</strong>
+  <%= @tariff.total_fee_without_tax_reais_pew_mwh %>
+</p>
+
+<p>
+  <strong>Pis confis:</strong>
+  <%= @tariff.pis_confis %>
+</p>
+
+<p>
+  <strong>Icms:</strong>
+  <%= @tariff.icms %>
+</p>
+
+<p>
+  <strong>Fee with tax reais per mwh:</strong>
+  <%= @tariff.fee_with_tax_reais_per_mwh %>
+</p>
+
+<%= link_to 'Edit', edit_tariff_path(@tariff) %> |
+<%= link_to 'Back', tariffs_path %>
