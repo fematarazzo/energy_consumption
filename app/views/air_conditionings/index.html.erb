@@ -1,69 +1,44 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <h1>Air Conditionings</h1>
 
-<h1>Air Conditionings</h1>
-
-<div>
-  <h4>Importar base</h4>
-  <%= form_tag import_air_conditionings_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <br>
-    <br>
-    <%= submit_tag 'Importar base' %>
-  <% end %>
-</div>
-
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Provider</th>
-      <th>Brand</th>
-      <th>Model intern</th>
-      <th>Model extern</th>
-      <th>Version</th>
-      <th>Capacity btu hour</th>
-      <th>Capacity kw</th>
-      <th>Power kw</th>
-      <th>Efficiency kw 127v</th>
-      <th>Efficiency kw 220v</th>
-      <th>Consumption 127v</th>
-      <th>Consumption 220v</th>
-      <th>Voltage</th>
-      <th>Consumption procel kwh per month</th>
-      <th>Consumption average brazil kwh per month</th>
-      <th>Hours consumption per month</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @air_conditionings.each do |air_conditioning| %>
-      <tr>
-        <td><%= air_conditioning.category %></td>
-        <td><%= air_conditioning.provider %></td>
-        <td><%= air_conditioning.brand %></td>
-        <td><%= air_conditioning.model_intern %></td>
-        <td><%= air_conditioning.model_extern %></td>
-        <td><%= air_conditioning.version %></td>
-        <td><%= air_conditioning.capacity_btu_hour %></td>
-        <td><%= air_conditioning.capacity_kw %></td>
-        <td><%= air_conditioning.power_kw %></td>
-        <td><%= air_conditioning.efficiency_kw_127v %></td>
-        <td><%= air_conditioning.efficiency_kw_220v %></td>
-        <td><%= air_conditioning.consumption_127v %></td>
-        <td><%= air_conditioning.consumption_220v %></td>
-        <td><%= air_conditioning.voltage %></td>
-        <td><%= air_conditioning.consumption_procel_kwh_per_month %></td>
-        <td><%= air_conditioning.consumption_average_brazil_kwh_per_month %></td>
-        <td><%= air_conditioning.hours_consumption_per_month %></td>
-        <td><%= link_to 'Show', air_conditioning %></td>
-        <td><%= link_to 'Edit', edit_air_conditioning_path(air_conditioning) %></td>
-        <td><%= link_to 'Destroy', air_conditioning, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <div>
+    <h4>Importar base</h4>
+    <%= form_tag import_air_conditionings_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <br>
+      <br>
+      <%= submit_tag 'Importar base' %>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+  <div class="row">
+    <% @air_conditionings.each do |air_conditioning| %>
+      <div class="col-4">
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= air_conditioning.provider %></h2>
+            <p><%= air_conditioning.brand %></p>
+            <div class="row">
+                <div class="col-4">
+                  <%= link_to 'Show', air_conditioning %>
+                </div>
+                <div class="col-4">
+                  <%= link_to 'Edit', edit_air_conditioning_path(air_conditioning) %>
+                </div>
+                <div class="col-4">
+                  <%= link_to 'Destroy', air_conditioning, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    <% end %>
+  </div>
 
-<%= link_to 'New Air Conditioning', new_air_conditioning_path %>
+  <br>
+
+  <%= link_to 'New Air Conditioning', new_air_conditioning_path %>
+</div>

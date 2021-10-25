@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Tariffs</h1>
 
 <div>
@@ -12,47 +11,40 @@
   <% end %>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Distribution</th>
-      <th>State</th>
-      <th>Aneel number</th>
-      <th>Initial validity</th>
-      <th>Final validity</th>
-      <th>Subgroup</th>
-      <th>Tusd application reais per mwh</th>
-      <th>Te application reais per mwh</th>
-      <th>Total fee without tax reais per mwh</th>
-      <th>Pis confis</th>
-      <th>Icms</th>
-      <th>Fee with tax reais per mwh</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tariffs.each do |tariff| %>
-      <tr>
-        <td><%= tariff.distribution %></td>
-        <td><%= tariff.state %></td>
-        <td><%= tariff.aneel_number %></td>
-        <td><%= tariff.initial_validity %></td>
-        <td><%= tariff.final_validity %></td>
-        <td><%= tariff.subgroup %></td>
-        <td><%= tariff.tusd_application_reais_per_mwh %></td>
-        <td><%= tariff.te_application_reais_per_mwh %></td>
-        <td><%= tariff.total_fee_without_tax_reais_per_mwh %></td>
-        <td><%= tariff.pis_confis %></td>
-        <td><%= tariff.icms %></td>
-        <td><%= tariff.fee_with_tax_reais_per_mwh %></td>
-        <td><%= link_to 'Show', tariff %></td>
-        <td><%= link_to 'Edit', edit_tariff_path(tariff) %></td>
-        <td><%= link_to 'Destroy', tariff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% @tariffs.each do |tariff| %>
+    <div class="col-4">
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <div class="row">
+            <div class="col-4">
+              <p>Taxa (R$/MWh)</p>
+            </div>
+            <div class="col-4">
+              <%= tariff.fee_with_tax_reais_per_mwh %>
+            </div>
+            <div class="col-4">
+              <%= tariff.state %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <%= link_to 'Show', tariff %>
+            </div>
+            <div class="col-4">
+              <%= link_to 'Edit', edit_tariff_path(tariff) %>
+            </div>
+            <div class="col-4">
+              <%= link_to 'Destroy', tariff, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  <% end %> 
+</div>
 
 <br>
 
