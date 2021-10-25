@@ -12,8 +12,12 @@
 @import "components/index";
 @import "pages/index";
 
+
+@import 'select2/dist/css/select2';
+
+
 .footer {
-  background:rgba(125, 253, 147, 0.521);
+  background: #F4F4F4;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +48,7 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgba(125, 253, 147, 0.521);
+  background: #F4F4F4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -66,8 +70,10 @@ html,
 body {
   height: 100%;
   position: relative;
+  background: #E6E6E6;
 }
-.main-container {
+
+#main-container {
   min-height: 100vh; /* will cover the 100% of viewport */
   overflow: hidden;
   display: block;
